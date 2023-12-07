@@ -21,7 +21,7 @@ import numpy as np
 import webbrowser
 
 
-##Calcular distancias de dos puntos
+##Calcular distancias de dos puntos (Moscoso, M. M. B., & Bello, J. C. B. M. ,2023)
 def distancia_tierra(lat1, lat2, lon1, lon2):
     
     # Convertir grados a radianes.
@@ -43,7 +43,7 @@ def distancia_tierra(lat1, lat2, lon1, lon2):
     # Calcular la distancia final en Km.
     return respuesta
 
-    # Agregar la función prioridad
+    # Agregar la función prioridad. (Moscoso, M. M. B., & Bello, J. C. B. M. ,2023)
 def prioridad(NumSolicitudes, Tdesplazamiento, Mdescoupa):
         # Si el número de solicitudes esta entre 0 y 2
         if NumSolicitudes >= 0 and NumSolicitudes <= 2:
@@ -374,8 +374,6 @@ class MiAplicacion(QWidget):
         
         return int(minutos_del_diafin)
 
-        
-
     def agregar_paciente(self):
        
         id_servicio = int(self.id_servicio_input.text())
@@ -590,7 +588,7 @@ class MiAplicacion(QWidget):
             self.mostrar_pacientes_text.setItem(row_position, 4, QTableWidgetItem(str(paciente_data[3])))  # Longitud
             self.mostrar_pacientes_text.setItem(row_position, 5, QTableWidgetItem(paciente_data[4]))  # Entidad
 
- 
+    #Función de asignación (Moscoso, M. M. B., & Bello, J. C. B. M. ,2023)
     def asignar_doctor(self,atencion,latitud, longitud, minuto, gantt, IDservicio, TipoCliente):    
         # Lista de posible asignacion
         posibleAsignacion = []
@@ -788,7 +786,7 @@ class MiAplicacion(QWidget):
     
         return gantt
     
-                
+    #Simulación de pacientes y asignación (Moscoso, M. M. B., & Bello, J. C. B. M. ,2023)            
     def asignacion_doctor1(self):
        gantt = []
        lista=[]
@@ -902,7 +900,7 @@ class MiAplicacion(QWidget):
         asignacion_dialog.exec_()
         
 
-    
+    #Función calcular indicadores (Moscoso, M. M. B., & Bello, J. C. B. M. ,2023)
     def calcular_indicadores(self):
      from datetime import datetime 
      # Llamar a la función de asignación de médicos
